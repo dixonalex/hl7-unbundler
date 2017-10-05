@@ -78,6 +78,10 @@ def main():
         raise
 
 
+if __name__ == "__main__":
+    main()
+
+
 def create_dirs():
     '''Create local file processing directories'''
     for dirs in [flattened_dir]:
@@ -231,7 +235,3 @@ def get_messages_from_sqs():
         sys.stdout.write('Got a message!\n')
         results.append(message)
     return(results)
-
-
-if __name__ == "__main__":
-    main()
